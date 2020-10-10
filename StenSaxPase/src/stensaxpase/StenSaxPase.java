@@ -34,7 +34,7 @@ public class StenSaxPase {
         String[] playerChoice = {"", ""};
         
         // Håller koll på om man spelar, reglerar om spelet skall avslutas eller fortsätta.
-        boolean isPlaying = false;
+        boolean isPlaying = true;
 
         // Game loop
         do {
@@ -124,6 +124,15 @@ public class StenSaxPase {
                 isPlaying = false;
                 // Meddelar att spelet är avslutat.
                 System.out.println("Tack för spelet!!");
+            }else {
+                // Nollställ poäng och spelarnas namn och antal spelare.
+                scores[0] = 0;
+                scores[1] = 0;
+                players[0] = "";
+                players[1] = "";
+                numPlayers = 0;
+                
+                System.out.println("Ny omgång!\n");
             }
 
         } while (isPlaying);
